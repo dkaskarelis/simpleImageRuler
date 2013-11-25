@@ -32,5 +32,16 @@ Labels are currently available only in German language.
 
 GPL 2 
 
+Start
+
+SimpleImageRuler.py [de|en]
+
+To translate in an other language, edit in file complete.pro your language qt_xx.ts. The xx is your code.
+
+pylupdate4 complete.pro
+
+Translate yout .ts file
+
+lrelease complete.pro
 
 
