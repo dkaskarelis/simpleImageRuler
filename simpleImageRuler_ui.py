@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'simpleImageRuler.ui'
 #
-# Created: Mon Nov 25 07:57:09 2013
+# Created: Mon Nov 25 19:29:14 2013
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -80,7 +80,6 @@ class Ui_MainWindow(object):
         self.toolButtonYellow.setObjectName("toolButtonYellow")
         self.toolButtonRed = QtGui.QToolButton(self.groupBox)
         self.toolButtonRed.setGeometry(QtCore.QRect(20, 330, 32, 32))
-        self.toolButtonRed.setToolTip("")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("icons/red.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButtonRed.setIcon(icon8)
@@ -112,7 +111,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.textEdit)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 29))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 20))
         self.menubar.setObjectName("menubar")
         self.menuDatei = QtGui.QMenu(self.menubar)
         self.menuDatei.setObjectName("menuDatei")
@@ -132,25 +131,28 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "SIR - Simple Image Ruler", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonCal.setToolTip(QtGui.QApplication.translate("MainWindow", "Kalibrierung", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonCal.setToolTip(QtGui.QApplication.translate("MainWindow", "calibrate", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonCal.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonLine.setToolTip(QtGui.QApplication.translate("MainWindow", "Linie", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonLine.setToolTip(QtGui.QApplication.translate("MainWindow", "line", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonLine.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonPath.setToolTip(QtGui.QApplication.translate("MainWindow", "Pfad", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonPath.setToolTip(QtGui.QApplication.translate("MainWindow", "path", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonPath.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonClear.setToolTip(QtGui.QApplication.translate("MainWindow", "Löschen", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonClear.setToolTip(QtGui.QApplication.translate("MainWindow", "delete", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonClear.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonNeutral.setToolTip(QtGui.QApplication.translate("MainWindow", "Neutral", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonNeutral.setToolTip(QtGui.QApplication.translate("MainWindow", "neutral", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonNeutral.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonBlack.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonWhite.setToolTip(QtGui.QApplication.translate("MainWindow", "white", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonWhite.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonYellow.setToolTip(QtGui.QApplication.translate("MainWindow", "yellow", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonYellow.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonRed.setToolTip(QtGui.QApplication.translate("MainWindow", "red", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonRed.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonZoomIn.setToolTip(QtGui.QApplication.translate("MainWindow", "größer", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonZoomIn.setToolTip(QtGui.QApplication.translate("MainWindow", "zoom in", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonZoomIn.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonZoomOut.setToolTip(QtGui.QApplication.translate("MainWindow", "kleiner", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButtonZoomOut.setToolTip(QtGui.QApplication.translate("MainWindow", "zoom out", None, QtGui.QApplication.UnicodeUTF8))
         self.toolButtonZoomOut.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuDatei.setTitle(QtGui.QApplication.translate("MainWindow", "Datei", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionOpen.setText(QtGui.QApplication.translate("MainWindow", "Öffnen...", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuDatei.setTitle(QtGui.QApplication.translate("MainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionOpen.setText(QtGui.QApplication.translate("MainWindow", "Open", None, QtGui.QApplication.UnicodeUTF8))
         self.actionBeenden.setText(QtGui.QApplication.translate("MainWindow", "Beenden", None, QtGui.QApplication.UnicodeUTF8))
 

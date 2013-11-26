@@ -24,13 +24,13 @@
 #  
 #  
 from PySide import QtCore, QtGui
-import simpleImageRuler_ui, sys
-
+import sys
+import simpleImageRuler_ui
 
 class ControlMainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(ControlMainWindow, self).__init__(parent)
-        self.ui=simpleImageRuler_ui.Ui_MainWindow()
+        self.ui = simpleImageRuler_ui.Ui_MainWindow()
         self.ui.setupUi(self)
 
         self.ui.graphicsView.setScene(QtGui.QGraphicsScene(self))
@@ -308,9 +308,14 @@ class ImageFile(object):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        locale = sys.argv[1]
+    else:
+        locale = unicode(QtCore.QLocale.system().name())
+        print ("locale: " + locale)
     app = QtGui.QApplication(sys.argv)
     translator_qt = QtCore.QTranslator()
-    translator_qt.load('qt_de.qm')
+    translator_qt.load('qt_' + locale + '.qm')
     app.installTranslator(translator_qt)
     mySW = ControlMainWindow()
     mySW.show()
