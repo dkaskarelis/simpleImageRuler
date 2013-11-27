@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
+<context>
+    <name>ControlMainWindow</name>
+    <message>
+        <location filename="SimpleImageRuler.py" line="76"/>
+        <source>Current mode is: calibration. Definition calibration length</source>
+        <translation>Aktueller Modus ist: Kalibrieren. Bitte bekannte Länge auswählen.</translation>
+    </message>
+</context>
 <context>
     <name>MainWindow</name>
     <message>
         <location filename="simpleImageRuler.ui" line="14"/>
         <source>SIR - Simple Image Ruler</source>
-        <translation type="unfinished">SIR - Simple Image Ruler</translation>
+        <translation>SIR - Simple Image Ruler</translation>
     </message>
     <message>
         <location filename="simpleImageRuler.ui" line="269"/>
@@ -81,25 +90,30 @@
 <context>
     <name>self.main</name>
     <message>
-        <location filename="SimpleImageRuler.py" line="212"/>
+        <location filename="SimpleImageRuler.py" line="214"/>
         <source>Kalibrierung</source>
         <translation type="unfinished">Kalibrierung</translation>
     </message>
-    <message encoding="UTF-8">
-        <location filename="SimpleImageRuler.py" line="212"/>
+    <message utf8="true">
+        <location filename="SimpleImageRuler.py" line="214"/>
         <source>Länge:</source>
         <translation type="unfinished">Länge:</translation>
+    </message>
+    <message>
+        <location filename="SimpleImageRuler.py" line="208"/>
+        <source>Current mode is: calibration. Definition calibration length</source>
+        <translation>Aktueller Modus ist: Kalibrieren. Bitte bekannte Länge auswählen.</translation>
     </message>
 </context>
 <context>
     <name>self.mainwidget</name>
     <message>
-        <location filename="SimpleImageRuler.py" line="274"/>
+        <location filename="SimpleImageRuler.py" line="276"/>
         <source>Open File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei öffnen</translation>
     </message>
     <message>
-        <location filename="SimpleImageRuler.py" line="274"/>
+        <location filename="SimpleImageRuler.py" line="276"/>
         <source>Image Files (*.png *.jpg *.jpeg)</source>
         <translation type="unfinished"></translation>
     </message>

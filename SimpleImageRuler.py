@@ -73,6 +73,7 @@ class ControlMainWindow(QtGui.QMainWindow):
         self.end=None   #Start und Ende der aktuellen Linie
         self.start=None 
         self.standardPen=QtGui.QPen()
+        translation = self.tr("Current mode is: calibration. Definition calibration length")
 
 
     def redirectMouseEvents(self, mode):
@@ -204,7 +205,8 @@ class Calibration(object):
         
     def startCalibration(self):
         self.main.redirectMouseEvents('cal')
-        self.main.ui.statusbar.showMessage(u'Aktueller Modus ist: cal  Bitte bekannte Länge auswählen')
+        self.main.ui.statusbar.showMessage(self.main.tr(
+         "Current mode is: calibration. Definition calibration length"))
         # hierauf muss der User einen mouse drag machen, dann geht es weiter mit self.calcFactor
         # Abbruch mit ESC ist möglich
 
