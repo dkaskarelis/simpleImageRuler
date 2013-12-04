@@ -39,15 +39,18 @@ class ControlMainWindow(QtGui.QMainWindow):
         self.ui.graphicsView.setSceneRect(
          QtCore.QRectF(self.ui.graphicsView.viewport().rect()))
 
-        self.f_press = {'line':self.line_press,
-         'neutral':self.neutral_press,
-         'cal':self.line_press, 'path':self.path_press}
-        self.f_move = {'line':self.line_move,
-         'neutral':self.neutral_move, 'cal':self.line_move,
-         'path':self.path_move}
-        self.f_release = {'line':self.line_release,
-         'neutral':self.neutral_release, 'cal':self.cal_release,
-         'path':self.path_release}
+        self.f_press = {'line': self.line_press,
+                        'neutral': self.neutral_press,
+                        'cal': self.line_press,
+                        'path': self.path_press}
+        self.f_move = {'line': self.line_move,
+                       'neutral': self.neutral_move,
+                       'cal': self.line_move,
+                       'path': self.path_move}
+        self.f_release = {'line': self.line_release,
+                          'neutral': self.neutral_release,
+                          'cal': self.cal_release,
+                          'path': self.path_release}
 
         self.redirectMouseEvents('neutral')
 
@@ -260,16 +263,13 @@ class TextEditHandler(object):
     def addlength(self, length):
         # add length and show it, length in Scene-Units
         self.lengthlist.append(length / self.currentscale * self.factor)
-        summe = 0
-        for f in self.lengthlist:
-            summe += f
-        strlist = [str(round(x, 1)) for x in self.lengthlist]
-        text = '<br>'.join(strlist)
+        summe = sum(self.lengthlist)
+        text = "<br>".join(map("{:.2f}".format, self.lengthlist))
         mw = summe / len(self.lengthlist)
-        mw = round(mw, 1)
-        summe = round(summe, 1)
-        self.text = (u"{} {} <br>=======<br>Σ {} <br> MW: {} <br><br>"
-         .format(self.oldtext, text, summe, mw))
+        self.text = (u"{} {} <br>=======<br>Σ {:.2f} <br> MW: {:.2f} "
+         "<br> min: {:.2f} <br> max: {:.2f} <br><br>"
+         .format(self.oldtext, text, summe, mw,
+         min(self.lengthlist), max(self.lengthlist)))
         textF = u'<div  align="right">{}</div>'.format(self.text)
         self.tew.setHtml(textF)
 
@@ -283,7 +283,7 @@ class TextEditHandler(object):
         #print "Aktueller Scale:", self.currentscale
 
     def memorizeOldText(self):
-        self.oldtext = "{} {}".format(self.oldtext, self.text)
+        self.oldtext = u"{} {}".format(self.oldtext, self.text)
         self.text = ''
         self.lengthlist = []
 
