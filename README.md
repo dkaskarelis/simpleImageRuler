@@ -38,11 +38,11 @@ Start
 
 ```SimpleImageRuler.py [de|en]```
 
-To translate in an other language, edit in file complete.pro your language qt_xx.ts. The xx is your code.
+To translate in an other language, edit in file complete.pro your language qt_xx.ts. The xx is language code.
 
 ```pylupdate4 complete.pro```
 
-Translate the .ts file
+Translate the .ts file, and setup with:
 
 ```lrelease complete.pro```
 
