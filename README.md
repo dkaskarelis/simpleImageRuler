@@ -1,22 +1,21 @@
 simpleImageRuler
 ================
 
-
-<strong> A program to measure things in photos </strong>
+A program to measure things in photos
 
 Please see screenshot.png for what you can expect. 
 
+S.I.R. requires:
 
-S.I.R. requires
-
-Python 2.7 <br>
-PySide 1.1 <br>
-Qt 4.8 <br>
+Python 2.7
+PySide 1.1
+Qt 4.8
 
 installed on your computer.
 
 
-<strong>How to use</strong>
+How to use
+----------
 
 1. Load a photo (.jpg or .png) which contains some sort of scale or ruler <br>
 2. Press CAL to start calibration, drag the mouse over a known length, and give the length value as input
@@ -24,24 +23,27 @@ installed on your computer.
 4. Or switch to "path mode" and do likewise. A path is stopped by pressing the right mouse button. 
 
 
-<strong> Limitations </strong>
+Limitations
+-----------
 
 Labels are currently available only in German language.
 
-<strong> License </strong>
+License
+------
 
 GPL 2 
 
 Start
+-----
 
-SimpleImageRuler.py [de|en]
+```SimpleImageRuler.py [de|en]```
 
-To translate in an other language, edit in file complete.pro your language qt_xx.ts. The xx is your code.
+To translate in an other language, edit in file complete.pro your language qt_xx.ts. The xx is language code.
 
-pylupdate4 complete.pro
+```pylupdate4 complete.pro```
 
-Translate yout .ts file
+Translate the .ts file, and setup with:
 
-lrelease complete.pro
+```lrelease complete.pro```
 
 
